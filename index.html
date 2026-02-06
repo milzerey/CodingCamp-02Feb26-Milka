@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document
-    </title>
+    <title> MySmart: To-Do List by Milka </title>
+
+    <!--CSS External-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Tailwind CSS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    
+
+<body class="min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(255,255,255,0.49), rgba(255,255,255,0.67)),
+ url(https://i.pinimg.com/736x/2a/44/ed/2a44edb54d858745a6d3af6a62399865.jpg);">
+    <!--Header Content-->
+    <header>
+        <h1 class="text-3xl font-bold text-center"> MySmart: Your To-Do List Manager</h1><br>
+    </header>
+
+    <!--Main Content-->
+    <main>
+        <!--Form Section-->
+        <section>
+            <form>
+                <!--To-Do Input-->
+                <input type="text" id="todo-input" placeholder="Enter a New Thing To-Do" required class="bg-white bg-opacity-500 border border-black p-1 rounded ">
+                <!--Date Input-->
+                <input type="date" id="todo-date" placeholder="Enter Due Date" required class="bg-white border border-black p-1 rounded ">
+            </form> 
+            <!--Line Spacing Supaya Ga Nempel-->
+            <div class="h-2.5"></div>
+
+            <!--Add Button-->
+            <button class= "bg-green-500 text-white p-2 rounded hover:bg-green-600 border border-black" onclick="addToDo()" type="button">Add To-Do</button>
+        </section>
+
+        <!--Action Section-->
+        <section class="flex pt-2 justify-between">
+            <!--Clear All Button-->
+            <button class="bg-pink-500 text-white p-2 border rounded border-black hover:bg-pink-600" onclick="deleteAllToDos()">Clear All</button>
+            <!--Filter Button-->
+            <button class="border rounded p-2 bg-yellow-200 text-black hover:bg-yellow-300" onclick="filterTodos()">Filter</button>
+        </section>
+
+        <!--To-Do List Section-->
+        <section class="pt-2">
+            <header>
+                <h2 class ="text-xl font-semibold"><u>My To-Do List:</u></h2>
+            </header>
+
+            <ul class="pt-2" id="todo-list">
+                <!--To-Do Items will be added here dynamically-->
+                <li>No to-do's available</li>
+            </ul>
+        </section>
+    </main>
+
+    <!--Gif Image Peramai Suasana-->
+    <div class="pt-4 flex justify-center">
+        <img src="https://i.pinimg.com/736x/c1/e3/ff/c1e3ff3e6caf90c426b71197e1c95d04.jpg"alt="To-Do List Gif" class="w-64 rounded-lg"> <br>
+    </div>
+
+    <!--Footer Content-->
+    <footer class="pt-8">
+        <p class="text-center text-gray-500">© 2026 To-Do-Manager by Milka G. Manalu</p>
+    </footer>
+
+    <!--Javascript External-->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
